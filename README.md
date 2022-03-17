@@ -49,3 +49,17 @@ await web3.eth.getStorageAt(instance, 1, console.log)
 ```
 
 You can use [etherscan](https://rinkeby.etherscan.io) to run the `unlock` function.
+
+## King
+
+Set your king contract address in `.env`.
+
+```
+KingAddr="0x0000000000000000000000000000000000000000"
+```
+
+run
+
+```bash
+npx hardhat run scripts/king_hack.js --network rinkeby
+```
