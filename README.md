@@ -39,3 +39,13 @@ npx hardhat run scripts/force_hack.js --network rinkeby
 references:
 - https://ethereum.stackexchange.com/questions/63987/can-a-contract-with-no-payable-function-have-ether/63988#63988
 - https://solidity-by-example.org/hacks/self-destruct/ 
+
+## Vault
+
+Get the password with below command run in console.
+
+```
+await web3.eth.getStorageAt(instance, 1, console.log)
+```
+
+You can use [etherscan](https://rinkeby.etherscan.io) to run the `unlock` function.
