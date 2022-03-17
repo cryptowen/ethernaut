@@ -27,7 +27,7 @@ await contract.sendTransaction({data: web3.eth.abi.encodeFunctionSignature("pwn(
 Set your force contract address in `.env`.
 
 ```
-ForceAddr="0x0000000000000000000000000000000000000000"
+FORCE_ADDR="0x0000000000000000000000000000000000000000"
 ```
 
 run
@@ -55,11 +55,25 @@ You can use [etherscan](https://rinkeby.etherscan.io) to run the `unlock` functi
 Set your king contract address in `.env`.
 
 ```
-KingAddr="0x0000000000000000000000000000000000000000"
+KING_ADDR="0x0000000000000000000000000000000000000000"
 ```
 
 run
 
 ```bash
 npx hardhat run scripts/king_hack.js --network rinkeby
+```
+
+## Reentrance
+
+Set your reentrance contract address in `.env`.
+
+```
+REENTRANCE_ADDR="0x0000000000000000000000000000000000000000"
+```
+
+run
+
+```bash
+npx hardhat run scripts/reentrance_hack.js --network rinkeby
 ```
