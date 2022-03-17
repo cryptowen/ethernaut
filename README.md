@@ -22,4 +22,20 @@ npx hardhat run scripts/coin_flip_hack.js --network rinkeby
 await contract.sendTransaction({data: web3.eth.abi.encodeFunctionSignature("pwn()")})
 ```
 
+## Force
 
+Set your force contract address in `.env`.
+
+```
+ForceAddr="0x0000000000000000000000000000000000000000"
+```
+
+run
+
+```bash
+npx hardhat run scripts/force_hack.js --network rinkeby
+```
+
+references:
+- https://ethereum.stackexchange.com/questions/63987/can-a-contract-with-no-payable-function-have-ether/63988#63988
+- https://solidity-by-example.org/hacks/self-destruct/ 
