@@ -77,3 +77,17 @@ run
 ```bash
 npx hardhat run scripts/reentrance_hack.js --network rinkeby
 ```
+
+## Elevator
+
+Set your elevator contract address in `.env`.
+
+```
+ELEVATOR_ADDR="0x0000000000000000000000000000000000000000"
+```
+
+run
+
+```bash
+npx hardhat run scripts/elevator_hack.js --network rinkeby
+```
