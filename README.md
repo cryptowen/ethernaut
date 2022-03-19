@@ -91,3 +91,37 @@ run
 ```bash
 npx hardhat run scripts/elevator_hack.js --network rinkeby
 ```
+
+## Privacy
+
+```solidity
+contract Privacy {
+  // slot 0
+  bool public locked = true;
+  // slot 1
+  uint256 public ID = block.timestamp;
+  // slot 2
+  uint8 private flattening = 10;
+  uint8 private denomination = 255;
+  uint16 private awkwardness = uint16(now);
+  // slot 3,4,5
+  bytes32[3] private data;
+}
+```
+
+Set your privacy contract address in `.env`.
+
+```
+PRIVACY_ADDR="0x0000000000000000000000000000000000000000"
+```
+
+run
+
+```bash
+npx hardhat run scripts/privacy_hack.js --network rinkeby
+```
+
+- https://docs.soliditylang.org/en/latest/internals/layout_in_storage.html
+- https://solidity-by-example.org/hacks/accessing-private-data/
+- https://web3js.readthedocs.io/en/v1.2.11/web3-eth.html#eth-sendtransaction
+
