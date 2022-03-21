@@ -238,3 +238,28 @@ run
 ```bash
 npx hardhat run scripts/preservation_hack.js --network rinkeby
 ```
+
+## Recovery
+
+The easiest way to get the address is to check Etherscan Internal Txns.
+Otherwise, the address can be calculated with `getContractAddress` in `ethers.utils`.
+The contract nonce starts from 1 instread of 0 after EIP 161.
+
+Set your recovery contract address in `.env`.
+
+```
+RECOVERY_ADDR="0x0000000000000000000000000000000000000000"
+```
+
+run
+
+```bash
+npx hardhat run scripts/recovery_hack.js --network rinkeby
+```
+
+references
+- https://docs.ethers.io/v5/api/utils/address/
+- https://docs.soliditylang.org/en/latest/control-structures.html#salted-contract-creations-create2
+- https://ethereum.stackexchange.com/questions/764/do-contracts-also-have-a-nonce
+- https://solidity-by-example.org/app/create2/
+
