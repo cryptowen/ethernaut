@@ -222,3 +222,19 @@ run
 ```bash
 npx hardhat run scripts/naught_coin_hack.js --network rinkeby
 ```
+
+## Preservation
+
+The `setTime` function in `LibraryContract` actually set the `timeZone1Library` field of the Preservation. Thus we can set timeZone1Library to a malicious contract which will change owner in `setTime` function.
+
+Set your preservation contract address in `.env`.
+
+```
+PRESERVATION_ADDR="0x0000000000000000000000000000000000000000"
+```
+
+run
+
+```bash
+npx hardhat run scripts/preservation_hack.js --network rinkeby
+```
