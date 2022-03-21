@@ -190,3 +190,22 @@ run
 ```bash
 npx hardhat run scripts/gatekeeper_one_hack.js --network rinkeby
 ```
+
+# Gatekeeper Two
+
+Set your gatekeeper_two contract address in `.env`.
+
+```
+GATEKEEPER_TWO="0x0000000000000000000000000000000000000000"
+```
+
+run
+
+```bash
+npx hardhat run scripts/gatekeeper_two_hack.js --network rinkeby
+```
+
+references
+- https://ethereum.stackexchange.com/questions/45095/how-could-msg-sender-tx-origin-and-extcodesizecaller-0-be-true
+- https://ethereum.stackexchange.com/questions/98700/find-address-of-a-contract-before-deployment-in-hardhat-and-ethers-js
+
