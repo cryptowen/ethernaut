@@ -18,8 +18,13 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
  * @type import('hardhat/config').HardhatUserConfig
  */
 module.exports = {
-  // defaultNetwork: "rinkeby",
   networks: {
+    // hardhat: {
+    //   forking: {
+    //     url: process.env.HTTP_ENDPOINT,
+    //     accounts: [process.env.PRIVATE_KEY],
+    //   },
+    // },
     rinkeby: {
       url: process.env.HTTP_ENDPOINT,
       accounts: [process.env.PRIVATE_KEY],

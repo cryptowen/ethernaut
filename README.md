@@ -191,12 +191,12 @@ run
 npx hardhat run scripts/gatekeeper_one_hack.js --network rinkeby
 ```
 
-# Gatekeeper Two
+## Gatekeeper Two
 
 Set your gatekeeper_two contract address in `.env`.
 
 ```
-GATEKEEPER_TWO="0x0000000000000000000000000000000000000000"
+GATEKEEPER_TWO_ADDR="0x0000000000000000000000000000000000000000"
 ```
 
 run
@@ -209,3 +209,16 @@ references
 - https://ethereum.stackexchange.com/questions/45095/how-could-msg-sender-tx-origin-and-extcodesizecaller-0-be-true
 - https://ethereum.stackexchange.com/questions/98700/find-address-of-a-contract-before-deployment-in-hardhat-and-ethers-js
 
+## Naught Coin
+
+Set your naught coin contract address in `.env`.
+
+```
+NAUGHT_COIN_ADDR="0x0000000000000000000000000000000000000000"
+```
+
+run
+
+```bash
+npx hardhat run scripts/naught_coin_hack.js --network rinkeby
+```
