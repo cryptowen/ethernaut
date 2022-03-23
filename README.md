@@ -262,4 +262,17 @@ references
 - https://docs.soliditylang.org/en/latest/control-structures.html#salted-contract-creations-create2
 - https://ethereum.stackexchange.com/questions/764/do-contracts-also-have-a-nonce
 - https://solidity-by-example.org/app/create2/
+- https://swende.se/blog/Ethereum_quirks_and_vulns.html
 
+## MagicNumber
+
+references:
+- https://medium.com/@hayeah/diving-into-the-ethereum-vm-6e8d5d2f3c30 
+
+## Alien Codex
+
+set `ALIEN_CODEX_ADDR` in `.env` and run
+
+```
+npx hardhat run scripts/alien_codex_hack.js --network rinkeby
+```

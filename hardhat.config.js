@@ -30,5 +30,14 @@ module.exports = {
       accounts: [process.env.PRIVATE_KEY],
     }
   },
-  solidity: "0.6.12",
+  solidity: {
+    compilers: [
+      {
+        version: "0.6.12",
+      },
+      {
+        version: "0.5.5",
+      }
+    ]
+  }
 };
