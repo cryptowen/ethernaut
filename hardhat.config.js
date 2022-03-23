@@ -22,7 +22,7 @@ module.exports = {
     hardhat: {
       forking: {
         url: process.env.HTTP_ENDPOINT,
-        accounts: [process.env.PRIVATE_KEY],
+        // blockNumber: 10377600,
       },
     },
     rinkeby: {

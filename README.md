@@ -294,3 +294,11 @@ set `SHOP_ADDR` in `.env` and run
 ```bash
 npx hardhat run scripts/shop_hack.js --network rinkeby
 ```
+
+## Dex
+
+set `DEX_ADDR` in `.env` and run
+
+```bash
+npx hardhat run scripts/dex_hack.js --network rinkeby
+```
