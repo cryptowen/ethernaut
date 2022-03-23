@@ -302,3 +302,11 @@ set `DEX_ADDR` in `.env` and run
 ```bash
 npx hardhat run scripts/dex_hack.js --network rinkeby
 ```
+
+## Puzzle Wallet
+
+set `PUZZLE_WALLET_ADDR` in `.env` and run
+
+```bash
+npx hardhat run scripts/puzzle_wallet_hack.js --network rinkeby
+```
