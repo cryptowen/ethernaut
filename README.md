@@ -310,3 +310,11 @@ set `PUZZLE_WALLET_ADDR` in `.env` and run
 ```bash
 npx hardhat run scripts/puzzle_wallet_hack.js --network rinkeby
 ```
+
+## Motorbike
+
+set `MOTORBIKE_ADDR` in `.env` and run
+
+```bash
+npx hardhat run scripts/motorbike_hack.js --network rinkeby
+
