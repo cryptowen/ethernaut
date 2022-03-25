@@ -1,5 +1,7 @@
 # Ethernaut
 
+<https://ethernaut.openzeppelin.com/>
+
 ## Coin Flip
 
 Set up the `.env` file with your HTTP_ENDPOINT, PRIVATE_KEY and coin flip instance address.
